@@ -130,25 +130,24 @@ class Bar extends StatelessWidget {
       children: [
         Text(
           '€${amountSpent.toStringAsFixed(2)}',
-          style: const TextStyle(
-            fontWeight: FontWeight.w600),
+          style: const TextStyle(fontWeight: FontWeight.w600),
         ),
-        const SizedBox(height: 6.0,),
+        const SizedBox(height: 6.0),
         Container(
           height: barHeight,
           width: 18.0,
           decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
-            borderRadius:   BorderRadius.circular(6.0),
+            borderRadius: BorderRadius.circular(6.0),
           ),
         ),
-
-
-
-        
-      ]
-
+        const SizedBox(height: 8.0),
+        Text(
+          label,
+          // Suggested code may be subject to a license. Learn more: ~LicenseLog:1888748325.
+          style: const TextStyle(fontSize: 16.0, fontWeight: FontWeight.w600),
         ),
-    ],
+      ],
     );
+  }
 }
